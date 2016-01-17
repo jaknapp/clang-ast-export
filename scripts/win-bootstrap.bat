@@ -7,7 +7,7 @@ IF "%GIT_PATH%"=="" (
   GOTO :end
   )
 git init
-git remote add origin $GIT_URL
+git remote add origin %GIT_URL%
 git pull origin master
 
 :end
