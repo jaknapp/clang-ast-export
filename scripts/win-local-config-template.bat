@@ -14,9 +14,3 @@ REM   3. Run install.bat
 REM   4. Copy gnuwin32 if desired.
 REM   5. Enter the path of gnuwin32\bin.
 SET LLVM_LIT_TOOLS_DIR=
-
-REM VISUAL_STUIOD_VSDEVCM: Path to batch file to open the Visual Studio command line.
-REM ie. C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\VsDevCmd.bat
-REM SET VISUAL_STUDIO_VSDEVCMD=C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\VsDevCmd.bat
-
-REM CMAKE_INSTALL_PREFIX
