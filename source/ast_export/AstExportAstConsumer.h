@@ -4,7 +4,9 @@
 #include "AstExportRecursiveAstVisitor.h"
 #include "clang/AST/ASTConsumer.h"
 
-class clang::ASTContext;
+namespace clang {
+class ASTContext;
+}
 
 namespace ast_export {
 class AstExportAstConsumer : public clang::ASTConsumer {

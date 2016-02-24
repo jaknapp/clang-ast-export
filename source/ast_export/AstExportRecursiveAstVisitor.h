@@ -3,13 +3,19 @@
 
 #include "clang/AST/RecursiveASTVisitor.h"
 
-class clang::ASTContext;
+namespace clang {
+class ASTContext;
+class Decl;
+}
 
 namespace ast_export {
 class AstExportRecursiveAstVisitor
   : public clang::RecursiveASTVisitor < AstExportRecursiveAstVisitor > {
 public:
   explicit AstExportRecursiveAstVisitor(clang::ASTContext *context);
+
+  // These visitor functions hide the RecursiveASTVisitor definitions.
+  bool VisitDecl(clang::Decl *Declaration);
 private:
   clang::ASTContext *ast_context_;
 };

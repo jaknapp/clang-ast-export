@@ -4,9 +4,14 @@
 #include <memory>
 #include "clang/Frontend/FrontendAction.h"
 
-class clang::ASTConsumer;
-class clang::CompilerInstance;
-class llvm::StringRef;
+namespace clang {
+class ASTConsumer;
+class CompilerInstance;
+}
+
+namespace llvm {
+class StringRef;
+}
 
 namespace ast_export {
 class AstExportAstFrontendAction : public clang::ASTFrontendAction {
