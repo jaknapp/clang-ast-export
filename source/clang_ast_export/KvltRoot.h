@@ -1,5 +1,5 @@
-#ifndef CLANG_AST_EXPORT_KVLTKVLISTVALUE_H
-#define CLANG_AST_EXPORT_KVLTKVLISTVALUE_H
+#ifndef CLANG_AST_EXPORT_KVLTROOT_H
+#define CLANG_AST_EXPORT_KVLTROOT_H
 
 #include <string>
 
@@ -10,18 +10,19 @@ class KvltStream;
 }
 
 namespace ast_export {
-class KvltKvListValue {
+class KvltRoot {
 public:
-  KvltKvListValue(KvltStream *stream);
-  ~KvltKvListValue();
-  KvltKvList Value(std::string value);
+  explicit KvltRoot(KvltStream *stream);
+  ~KvltRoot();
+  void Value(std::string value);
 
   // TODO: Refactor these two to a common base class.
   KvltList List();
   KvltKvList KvList();
 private:
+  KvltRoot();
   KvltStream *stream_;
 };
 }
 
-#endif // CLANG_AST_EXPORT_KVLTKVLISTVALUE_H
+#endif // CLANG_AST_EXPORT_KVLTROOT_H

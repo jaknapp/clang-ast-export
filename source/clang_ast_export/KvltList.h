@@ -11,15 +11,18 @@ class KvltStream;
 namespace ast_export {
 class KvltList {
 public:
-  KvltList(KvltStream *stream);
+  explicit KvltList(KvltStream *stream);
+  KvltList(KvltList &&KvltList);
   ~KvltList();
-  KvltList Value(std::string value);
+  KvltList &Value(std::string value);
 
   // TODO: Refactor these two to a base class.
   KvltList List();
   KvltKvList KvList();
 private:
+  KvltList();
   KvltStream *stream_;
+  bool should_close_;
 };
 }
 

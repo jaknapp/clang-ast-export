@@ -9,16 +9,24 @@
 using std::string;
 
 namespace ast_export {
-KvltList::KvltList(KvltStream *stream) : stream_(stream) {}
+KvltList::KvltList(KvltStream *stream)
+  : stream_(stream), should_close_(true) {}
 
-KvltList::~KvltList() {
-  stream_->Consumer()->ConsumeListClose();
+KvltList::KvltList(KvltList &&from)
+  : stream_(from.stream_) {
+  from.stream_ = nullptr;
+  from.should_close_ = false;
 }
 
-KvltList KvltList::Value(string value) {
+KvltList::~KvltList() {
+  if (should_close_) {
+    stream_->Consumer()->ConsumeListClose();
+  }
+}
+
+KvltList &KvltList::Value(string value) {
   stream_->Consumer()->ConsumeValue(value);
-  KvltList list(stream_);
-  return list;
+  return *this;
 }
 
 KvltList KvltList::List() {

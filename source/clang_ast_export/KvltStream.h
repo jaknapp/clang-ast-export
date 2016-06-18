@@ -8,9 +8,10 @@ class KvltConsumer;
 namespace ast_export {
 class KvltStream {
 public:
-  KvltStream(KvltConsumer *consumer);
+  explicit KvltStream(KvltConsumer *consumer);
   KvltConsumer *Consumer();
 private:
+  KvltStream();
   KvltConsumer *consumer_;
 };
 }

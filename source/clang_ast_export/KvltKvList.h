@@ -12,10 +12,14 @@ namespace ast_export {
 class KvltKvList {
 public:
   explicit KvltKvList(KvltStream *stream);
+  // Needed because user-declared destructor is defined. N3225 12.8/8
+  KvltKvList(KvltKvList &&from);
   ~KvltKvList();
   KvltKvListValue Key(std::string key);
 private:
+  KvltKvList();
   KvltStream *stream_;
+  bool should_close_;
 };
 }
 

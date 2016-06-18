@@ -1,4 +1,4 @@
-#include "ast_export/AstExportAstFrontendAction.h"
+#include "clang_ast_export/AstExportAstFrontendAction.h"
 #include "clang/Tooling/CommonOptionsParser.h"
 #include "clang/Tooling/Tooling.h"
 #include "llvm/Support/CommandLine.h"
