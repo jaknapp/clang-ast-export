@@ -1,3 +1,8 @@
+# This automated test scripts does the following:
+# - Run the clang ast export executable against some input.
+# - Record the output to file.
+# - Compare the output with an expected results file.
+
 import difflib
 import os
 import subprocess
@@ -50,7 +55,7 @@ def main(argv):
   open(result_output_file_path, 'w').write(test_output)
   try:
     formatted_test_output, formatting_errors = subprocess.Popen(['python', '-m', 'json.tool'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate(input=test_output)
-    formatted_test_output = formatted_test_output.replace('\r', '')
+    formatted_test_output = formatted_test_output.replace('\r', '').strip()
     open(result_output_file_path, 'w').write(formatted_test_output)
   except:
     print sys.exc_info()[0]
@@ -60,8 +65,9 @@ def main(argv):
   expected_output = open(output_file_path).read()
   if not (formatted_test_output == expected_output):
     print 'Test result output does not match expectation:'
-    for line in (difflib.unified_diff([formatted_test_output], [expected_output])):
-      print line
+    # This diff is crappy. Could use FC on windows.
+    # for line in (difflib.unified_diff([formatted_test_output], [expected_output])):
+      # print line
     sys.exit(1)
 
 if __name__ == "__main__":

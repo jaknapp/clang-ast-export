@@ -13,7 +13,7 @@ KvltList::KvltList(KvltStream *stream)
   : stream_(stream), should_close_(true) {}
 
 KvltList::KvltList(KvltList &&from)
-  : stream_(from.stream_) {
+  : stream_(from.stream_), should_close_(from.should_close_) {
   from.stream_ = nullptr;
   from.should_close_ = false;
 }

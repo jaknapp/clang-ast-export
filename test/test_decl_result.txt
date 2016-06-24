@@ -1,146 +1,49 @@
 [
     {
+        "clang_type": "Decl",
+        "identifier_info_name_start": "ClassType",
+        "kind_name": "class",
         "loc_end": {
-            "is_file_id": "1",
-            "is_macro_id": "0",
-            "is_valid": "0"
+            "expansionLoc": {
+                "column": "2",
+                "isValid": "1",
+                "line": "14"
+            },
+            "isFileID": "1",
+            "isMacroID": "0",
+            "isValid": "1",
+            "presumedLoc": {
+                "column": "2",
+                "filename": "E:\\dev\\clang-ast-export-test\\clang-ast-export-git\\test\\test_decl_input.cc",
+                "isValid": "1",
+                "line": "14"
+            },
+            "spellingLoc": {
+                "column": "2",
+                "isValid": "1",
+                "line": "14"
+            }
         },
         "loc_start": {
-            "is_file_id": "1",
-            "is_macro_id": "0",
-            "is_valid": "0"
-        }
-    },
-    {
-        "loc_end": {
-            "is_file_id": "1",
-            "is_macro_id": "0",
-            "is_valid": "1"
-        },
-        "loc_start": {
-            "is_file_id": "1",
-            "is_macro_id": "0",
-            "is_valid": "1"
-        }
-    },
-    {
-        "loc_end": {
-            "is_file_id": "1",
-            "is_macro_id": "0",
-            "is_valid": "1"
-        },
-        "loc_start": {
-            "is_file_id": "1",
-            "is_macro_id": "0",
-            "is_valid": "1"
-        }
-    },
-    {
-        "loc_end": {
-            "is_file_id": "1",
-            "is_macro_id": "0",
-            "is_valid": "1"
-        },
-        "loc_start": {
-            "is_file_id": "1",
-            "is_macro_id": "0",
-            "is_valid": "1"
-        }
-    },
-    {
-        "loc_end": {
-            "is_file_id": "1",
-            "is_macro_id": "0",
-            "is_valid": "1"
-        },
-        "loc_start": {
-            "is_file_id": "1",
-            "is_macro_id": "0",
-            "is_valid": "1"
-        }
-    },
-    {
-        "loc_end": {
-            "is_file_id": "1",
-            "is_macro_id": "0",
-            "is_valid": "1"
-        },
-        "loc_start": {
-            "is_file_id": "1",
-            "is_macro_id": "0",
-            "is_valid": "1"
-        }
-    },
-    {
-        "loc_end": {
-            "is_file_id": "1",
-            "is_macro_id": "0",
-            "is_valid": "1"
-        },
-        "loc_start": {
-            "is_file_id": "1",
-            "is_macro_id": "0",
-            "is_valid": "1"
-        }
-    },
-    {
-        "loc_end": {
-            "is_file_id": "1",
-            "is_macro_id": "0",
-            "is_valid": "1"
-        },
-        "loc_start": {
-            "is_file_id": "1",
-            "is_macro_id": "0",
-            "is_valid": "1"
-        }
-    },
-    {
-        "loc_end": {
-            "is_file_id": "1",
-            "is_macro_id": "0",
-            "is_valid": "1"
-        },
-        "loc_start": {
-            "is_file_id": "1",
-            "is_macro_id": "0",
-            "is_valid": "1"
-        }
-    },
-    {
-        "loc_end": {
-            "is_file_id": "1",
-            "is_macro_id": "0",
-            "is_valid": "1"
-        },
-        "loc_start": {
-            "is_file_id": "1",
-            "is_macro_id": "0",
-            "is_valid": "1"
-        }
-    },
-    {
-        "loc_end": {
-            "is_file_id": "1",
-            "is_macro_id": "0",
-            "is_valid": "1"
-        },
-        "loc_start": {
-            "is_file_id": "1",
-            "is_macro_id": "0",
-            "is_valid": "1"
-        }
-    },
-    {
-        "loc_end": {
-            "is_file_id": "1",
-            "is_macro_id": "0",
-            "is_valid": "1"
-        },
-        "loc_start": {
-            "is_file_id": "1",
-            "is_macro_id": "0",
-            "is_valid": "1"
+            "expansionLoc": {
+                "column": "2",
+                "isValid": "1",
+                "line": "14"
+            },
+            "isFileID": "1",
+            "isMacroID": "0",
+            "isValid": "1",
+            "presumedLoc": {
+                "column": "2",
+                "filename": "E:\\dev\\clang-ast-export-test\\clang-ast-export-git\\test\\test_decl_input.cc",
+                "isValid": "1",
+                "line": "14"
+            },
+            "spellingLoc": {
+                "column": "2",
+                "isValid": "1",
+                "line": "14"
+            }
         }
     }
 ]
